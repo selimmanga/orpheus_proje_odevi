@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f7;
+    color: #333;
+    background: linear-gradient(90deg, rgba(119,114,214,1) 0%, rgba(0,0,0,1) 100%, rgba(0,212,255,1) 100%);
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+ul li {
+    margin: 0;
+}
+
+ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+ul li a:hover {
+    background-color: rgba(164, 46, 255, 0.7);
+    color: #fff;
+}
+
+.uygulamalar {
+    position: relative;
+}
+
+#dropdown-uygulamalar {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.uygulamalar:hover #dropdown-uygulamalar {
+    display: block;
+}
+
+#dropdown-uygulamalar ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown-uygulamalar ul li a {
+    padding: 10px 20px;
+    width: 200px;
+}
+
+#ana-icerik {
+    padding: 20px;
+}
+
+#icerik-1, #icerik-2, #icerik-4 {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.icerik1-aciklama, .icerik2-aciklama, .icerik4-aciklama, .icerik5-aciklama {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#icerik-2 {
+    background: linear-gradient(90deg, rgba(119, 114, 214, 1) 0%, rgba(37, 36, 67, 1) 0%, rgba(222, 220, 255, 1) 0%, rgba(245, 245, 247, 1) 96%, rgba(255, 255, 255, 1) 100%, rgba(0, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+#icerik-4 {
+    background: linear-gradient(90deg, rgba(41, 158, 143, 1) 0%, rgba(161, 161, 161, 1) 0%, rgba(135, 67, 173, 1) 68%);
+}
+
+#kullan-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background-color: rgb(112, 0, 255);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#kullan-btn:hover {
+    box-shadow: 0 0 10px rgb(112, 0, 255);
+}
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 315px;
+    border: none;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+#arkaplan-1{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(90deg, rgba(119,114,214,1) 0%, rgba(0,0,0,1) 100%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: 600px;
+}

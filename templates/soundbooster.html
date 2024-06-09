@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orhepus | Soundbooster</title>   
+    <link rel="stylesheet" href="/static/css/booster.css">
+</head>
+</head>
+<body>
+    <h1>Soundbooster</h1>
+    <form action="{{ url_for('soundbooster') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".wav, .mp3" required>
+        <label for="eq_level">Booster Seviyesi (Örn: 1.5):</label>
+        <input type="text" id="eq_level" name="eq_level">
+        <label for="freq_range">Frekans Aralığı:</label>
+        <select id="freq_range" name="freq_range">
+            <option value="all">Tüm Ses Kaydı</option>
+            <option value="low">Düşük Frekanslar (Bass)</option>
+            <option value="mid">Orta Frekanslar</option>
+            <option value="high">Yüksek Frekanslar (Tiz)</option>
+        </select>
+        <button type="submit">Uygula</button>
+        <a href="/anasayfa">Geri Dön</a>
+
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>

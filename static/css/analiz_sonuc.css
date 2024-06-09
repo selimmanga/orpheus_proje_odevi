@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+}
+
+.container {
+    margin-top: 300px;
+    max-width: 800px; /* İçeriğin maksimum genişliği */
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #0c1b77;
+    border-radius: 10px;
+    background-color: #4564b7;
+    position: relative; /* Konumlandırma için */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.graph-container {
+    position: relative; /* Konumlandırma için */
+    margin-bottom: 40px; /* Grafiklerin altına biraz daha boşluk eklemek için */
+}
+
+.graph {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Grafiklerin altına boşluk bırakmak için */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Tablo genişliğini sabit tutmak için */
+}
+
+th, td {
+    border: 3px solid #2b1b84;
+    padding: 10px;
+    text-align: center; /* Sütun değerlerini ortalamak için */
+    overflow: hidden; /* Sütun değerlerinin taşmasını önlemek için */
+    white-space: nowrap; /* Sütun değerlerinin satır atlamasını önlemek için */
+    text-overflow: ellipsis; /* Sütun değerlerinin taşması durumunda kısaltma yapmak için */
+    border-radius: 6px;
+}

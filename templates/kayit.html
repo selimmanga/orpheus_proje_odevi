@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/kayit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Orpheus | Kayıt</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="baslik">ORPHEUS Kayıt Paneli</h1>
+        <form action="{{ url_for('kullanici_kayit') }}" method="post">
+            <label>Adınızı Girin: </label><br>
+            <input type="text" name="ad" placeholder="Ör: John" required><br><br>
+            
+            <label>Soyadınızı Girin: </label><br>
+            <input type="text" name="soyad" placeholder="Ör: Doe" required><br><br>
+
+            {% if hata %}
+            <label id="hata-mesaji">{{ hata }}</label>
+            <label>Şifrenizi Oluşturun (En az 6 karakter): </label><br>
+            <input type="password" name="sifre" required><br><br>
+            {% else %}
+            <label>Şifrenizi Oluşturun (En az 6 karakter): </label><br>
+            <input type="password" name="sifre" required><br><br>
+            {% endif %}
+
+
+
+            <label>E-Mailinizi Girin: </label><br>
+            <input type="email" name="email" placeholder="Ör: ornekemail@hotmail.com" required><br><br>
+
+            <label>Doğum Tarihinizi Seçin: </label><br>
+            <input type="date" name="dogum"><br><br>
+            <button id="olustur-btn"><i class="fa fa-arrow-right" style="font-size:18px"></i></i>&nbsp;Hesap Oluştur</button>
+        </form>
+        <a href="/giris">Zaten bir hesabınız var mı? Giriş yapmak için tıklayın.</a>
+    </div>
+</body>
+</html>

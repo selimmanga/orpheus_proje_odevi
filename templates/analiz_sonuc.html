@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/analiz_sonuc.css">
+    <title>Orpheus | Analiz Sonuçları</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Müzik Analizi Sonuçları</h1>
+        
+        <div class="graph-container">
+            <h2>Mel Spectrogram</h2>
+            <img class="graph" src="{{ mel_spec_image }}" alt="Mel Spectrogram">
+        </div>
+        
+        <div class="graph-container">
+            <h2>Müzik BPM Değeri</h2>
+            <img class="graph" src="{{ bpm_image }}" alt="BPM Değeri">
+        </div>
+        
+        <h2>Analiz Sonuçları</h2>
+        <table>
+            <tr>
+                <th>Özellik</th>
+                <th>Değer</th>
+            </tr>
+            <tr>
+                <td>Frekans (Hz)</td>
+                <td>{{ '%.2f' % frequencies[1] }}</td>
+            </tr>
+            <tr>
+                <td>Desibel (dB)</td>
+                <td>{{ '%.2f' % db_spectrogram.mean() }}</td>
+            </tr>
+            <tr>
+                <td>BPM</td>
+                <td>{{ '%.2f' % bpm }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
